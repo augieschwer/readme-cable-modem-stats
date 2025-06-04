@@ -28,3 +28,27 @@ This project is based off of this previous work:
 helm repo add influxdata https://helm.influxdata.com/
 helm install myinfluxdb influxdata/influxdb2
 ```
+
+# Deploy
+
+```
+kubectl apply -f ./arris-stats-deployment.yaml
+```
+
+# Testing
+
+Use the debug configuration to build an image with debugging enabled
+
+```
+docker build -t augie/arris_cable_modem_stats:debug -f arris-stats-debug-dockerfile .
+docker run -d augie/arris_cable_modem_stats:debug
+```
+
+Spoof the SB8200 connection status page for testing
+
+```
+docker build -t augie/sb8200_spoof -f ./nginx-dockerfile .
+docker run -d -p 8080:80 augie/sb8200_spoof
+```
+
+Now you can test against the URL: http://localhost:8080/cmconnectionstatus.html
