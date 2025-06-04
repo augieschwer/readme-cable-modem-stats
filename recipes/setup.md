@@ -1,6 +1,6 @@
 ---
 title: Setup
-description: Recipe Description
+description: Environment setup
 hidden: false
 recipe:
   color: '#018FF4'
@@ -19,10 +19,10 @@ helm install myinfluxdb influxdata/influxdb2
 
 <!-- shell@ -->
 
-https://minikube.sigs.k8s.io/docs/start/
+<https://minikube.sigs.k8s.io/docs/start/>
 
 # Install InfluxDB
 
 <!-- shell@ -->
 
-https://docs.influxdata.com/platform/install-and-deploy/deploying/kubernetes/
+<https://docs.influxdata.com/platform/install-and-deploy/deploying/kubernetes/>
