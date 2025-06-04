@@ -13,3 +13,18 @@ This project is based off of this previous work:
 * [https://github.com/andrewfraley/arris\_cable\_modem\_stats](https://github.com/andrewfraley/arris_cable_modem_stats)
 * [https://github.com/billimek/SB6183-stats-for-influxdb](https://github.com/billimek/SB6183-stats-for-influxdb)
 * [https://github.com/t-mart/ispee](https://github.com/t-mart/ispee)
+
+# Setup
+
+## Install MiniKube
+
+[https://minikube.sigs.k8s.io/docs/start/](https://minikube.sigs.k8s.io/docs/start/)
+
+## Install InfluxDB
+
+[https://docs.influxdata.com/platform/install-and-deploy/deploying/kubernetes/](https://docs.influxdata.com/platform/install-and-deploy/deploying/kubernetes/)
+
+```shell
+helm repo add influxdata https://helm.influxdata.com/
+helm install myinfluxdb influxdata/influxdb2
+```
